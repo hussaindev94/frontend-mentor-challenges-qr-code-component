@@ -13,89 +13,92 @@
 
 /*Body Styles*/
 body {
-    padding: 0;
-    margin: 0;
-    display: grid;
-    place-items: center;
-    width: 100vw;
-    height: 100vh;
-    background: var(--background-color);
+  padding: 0;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: var(--background-color);
 }
-h1{
-    color: var(--heading-color);
-    font-weight: 800;
-    position: fixed;
-    top: 0;
-    margin: 0;
+h1 {
+  color: var(--heading-color);
+  font-weight: 800;
+  position: fixed;
+  top: 0;
+  margin: 0;
 }
-#main{
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* .qr-code-card-section{
+    width: 100%;
+    height: 100%;
+} */
+/*Card Container Styles*/
+.card-container {
+  box-shadow: var(--card-box-shadow);
+  box-sizing: border-box;
+  max-width: 320px; /*Make the card's width not to exceed 320px no matter the size of the screen*/
+  width: 100%; /*Make the card's with change dynamically with the smaller devices withd*/
+  height: fit-content; /*Make the card's height change dynamically with the card's contents*/
+  border-radius: 20px;
+  padding: 16px 16px 40px 16px;
+  background: var(--white-color);
+  /*Card Image Styles----------------*/
+  .qr-code-image {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 288px; /*Make the image width not to exceed 288px*/
+    height: auto;
+  }
+
+  /*Card Info Container Styles------------*/
+  .card-info-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-.qr-code-card-section{
-    width: 100%;
-    height: 100%;
-}
-/*Card Container Styles*/
-.card-container {
-    box-shadow: var(--card-box-shadow);
-    box-sizing: border-box;
-    max-width: 320px; /*Make the card's width not to exceed 320px no matter the size of the screen*/
-    width: 100%; /*Make the card's with change dynamically with the smaller devices withd*/
-    height: fit-content; /*Make the card's height change dynamically with the card's contents*/
-    border-radius: 20px;
-    padding: 16px 16px 40px 16px;
-    background: var(--white-color);
-    /*Card Image Styles----------------*/
-    .qr-code-image {
-        border-radius: 10px;
-        width: 100%;
-        max-width: 288px; /*Make the image width not to exceed 288px*/
-        height: auto;
+    align-self: stretch;
+    gap: 16px;
+    padding: 0 16px;
+    margin-top: 24px;
+    /*General font style || common styles*/
+    font-family: Outfit, sans-serif;
+    font-style: normal;
+    font-feature-settings: "liga" off, "clig" off;
+    text-align: center;
+
+    /*Card Title Styles-------------------*/
+    .card-title {
+      margin: 0;
+      width: 17ch;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 120%;
+      color: var(--heading-color);
     }
-
-    /*Card Info Container Styles------------*/
-    .card-info-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-self: stretch;
-        gap: 16px;
-        padding: 0 16px;
-        margin-top: 24px;
-        /*General font style || common styles*/
-        font-family: Outfit, sans-serif;
-        font-style: normal;
-        font-feature-settings: 'liga' off, 'clig' off;
-        text-align: center;
-
-        /*Card Title Styles-------------------*/
-        .card-title {
-            margin: 0;
-            width: 17ch;
-            font-size: 22px;
-            font-weight: 700;
-            line-height: 120%;
-            color: var(--heading-color);
-        }
-        /*Card Info Styles-----------------*/
-        .card-info {
-            margin: 0;
-            width: 27ch;
-            font-size: 15px;
-            font-weight: 400;
-            line-height: 140%;
-            letter-spacing: 0.2px;
-            color: var(--paragraph-color);
-        }
+    /*Card Info Styles-----------------*/
+    .card-info {
+      margin: 0;
+      width: 27ch;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: 0.2px;
+      color: var(--paragraph-color);
     }
+  }
 }
 
-footer{
-    /* border: 2px solid; */
-    width: 100%;
-    position: fixed;
-    bottom: 5px;
+ul {
+  list-style: none;
+}
+footer {
+  /* border: 2px solid; */
+  width: 100%;
+  position: fixed;
+  bottom: 5px;
 }
