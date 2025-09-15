@@ -81,3 +81,10 @@ body {
         }
     }
 }
+
+footer{
+    /* border: 2px solid; */
+    width: 100%;
+    position: fixed;
+    bottom: 5px;
+}
