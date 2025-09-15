@@ -1,14 +1,14 @@
 /*Google Font*/
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-/*Style variables*/
 
+/*Style variables*/
 :root {
   --paragraph-font-size: 15px;
   --background-color: hsl(212, 45%, 89%);
   --white-color: hsl(0, 0%, 100%);
-  --card-box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.05);
   --paragraph-color: hsl(216, 15%, 48%);
   --heading-color: hsl(218, 44%, 22%);
+  --card-box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.15);
 }
 
 /*Body Styles*/
@@ -17,13 +17,18 @@ body {
     margin: 0;
     display: grid;
     place-items: center;
-    width: 100wv;
+    width: 100vw;
     height: 100vh;
     background: var(--background-color);
 }
 
 /*Card Container Styles*/
 .card-container {
+    box-shadow: var(--card-box-shadow);
+    box-sizing: border-box;
+    max-width: 320px; /*Make the card's width not to exceed 320px no matter the size of the screen*/
+    width: 90%; /*Make the card's with change dynamically with the smaller devices withd*/
+    height: fit-content; /*Make the card's height change dynamically with the card's contents*/
     border-radius: 20px;
     padding: 16px 16px 40px 16px;
     background: var(--white-color);
@@ -31,16 +36,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--card-box-shadow);
-    box-sizing: border-box;
-    width: fit-content;
-    height: fit-content;
 
     /*Card Image Styles----------------*/
     .qr-code-image {
         border-radius: 10px;
-        width: 288px;
-        height: 288px;
+        width: 100%;
+        max-width: 288px; /*Make the image width not to exceed 288px*/
+        height: auto;
     }
 
     /*Card Info Container Styles------------*/
@@ -61,22 +63,21 @@ body {
         /*Card Title Styles-------------------*/
         .card-title {
             margin: 0;
+            width: 17ch;
             font-size: 22px;
             font-weight: 700;
             line-height: 120%;
             color: var(--heading-color);
-            width: 17ch;
         }
         /*Card Info Styles-----------------*/
         .card-info {
             margin: 0;
             width: 27ch;
-            color: var(--paragraph-color);
             font-size: 15px;
-            font-style: normal;
             font-weight: 400;
             line-height: 140%;
             letter-spacing: 0.2px;
+            color: var(--paragraph-color);
         }
     }
 }
