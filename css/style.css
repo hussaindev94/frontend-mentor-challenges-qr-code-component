@@ -21,22 +21,26 @@ body {
     height: 100vh;
     background: var(--background-color);
 }
-
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.qr-code-card-section{
+    width: 100%;
+    height: 100%;
+}
 /*Card Container Styles*/
 .card-container {
     box-shadow: var(--card-box-shadow);
     box-sizing: border-box;
     max-width: 320px; /*Make the card's width not to exceed 320px no matter the size of the screen*/
-    width: 90%; /*Make the card's with change dynamically with the smaller devices withd*/
+    width: 100%; /*Make the card's with change dynamically with the smaller devices withd*/
     height: fit-content; /*Make the card's height change dynamically with the card's contents*/
     border-radius: 20px;
     padding: 16px 16px 40px 16px;
     background: var(--white-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
     /*Card Image Styles----------------*/
     .qr-code-image {
         border-radius: 10px;
